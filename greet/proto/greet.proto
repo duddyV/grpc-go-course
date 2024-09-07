@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package greet;
 
-option go_package = "github.com/duddyV/grpc-go-course";
+option go_package = "github.com/duddyV/grpc-go-course/greet/proto";
 
 message GreetRequest {
     string first_name = 1;
@@ -14,4 +14,5 @@ message GreetResponse {
 
 service GreetService {
     rpc Greet (GreetRequest) returns (GreetResponse);
+    rpc GreetManyTimes (GreetRequest) returns (stream GreetResponse);
 }
