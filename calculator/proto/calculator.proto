@@ -8,10 +8,12 @@ import "calculator/proto/sum.proto";
 import "calculator/proto/primes.proto";
 import "calculator/proto/avg.proto";
 import "calculator/proto/max.proto";
+import "calculator/proto/sqrt.proto";
 
 service CalculatorService {
     rpc Sum(SumRequest) returns (SumResponse);
     rpc Primes(PrimesRequest) returns (stream PrimesResponse);
     rpc Avg(stream AvgRequest) returns (AvgResponse);
     rpc Max(stream MaxRequest) returns (stream MaxResponse);
+    rpc Sqrt(SqrtRequest) returns (SqrtResponse);
 }
